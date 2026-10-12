@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="فيرتيكس للحلول العقارية والمصاعد - توريد وتركيب وصيانة أنظمة المصاعد والحلول العقارية الحديثة بأعلى معايير الأمان.">
+    <title>Vertex | فيرتيكس للحلول العقارية والمصاعد</title>
+    <style>
+        /* CSS RESET & VARIABLES */
+        :root {
+            --bg-color: #f7f9fa;
+            --surface-color: #ffffff;
+            --primary-dark: #1e293b;
+            --accent-muted: #475569;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+            --whatsapp-color: #25d366;
+            --whatsapp-hover: #128c7e;
+            --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* LAYOUT & CONTAINERS */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background-color: var(--surface-color);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 70px;
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-weight: 400;
+            margin-right: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 50px 0 60px;
+            text-align: center;
+            background-color: var(--surface-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-image-container {
+            max-width: 750px;
+            margin: 0 auto 28px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 650px;
+            margin: 0 auto 24px;
+        }
+
+        /* BUTTONS */
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .btn-call {
+            background-color: var(--primary-dark);
+            color: #ffffff;
+        }
+
+        .btn-call:hover {
+            background-color: var(--accent-muted);
+        }
+
+        .btn-wa {
+            background-color: var(--whatsapp-color);
+            color: #ffffff;
+        }
+
+        .btn-wa:hover {
+            background-color: var(--whatsapp-hover);
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            padding: 28px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            border-color: #cbd5e1;
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+        }
+
+        /* FLOATING WHATSAPP BUTTON */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            background-color: var(--whatsapp-color);
+            color: #ffffff;
+            border-radius: 50px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            z-index: 1000;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            background-color: var(--whatsapp-hover);
+            transform: scale(1.05);
+        }
+
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 32px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* MOBILE RESPONSIVE FIXES */
+        @media (max-width: 650px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+                padding: 14px 0;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+                gap: 16px;
+                border-top: 1px solid var(--border-color);
+                padding-top: 10px;
+            }
+
+            .hero {
+                padding: 32px 0 40px;
+            }
+
+            .hero-image-container img {
+                height: 200px;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .whatsapp-float {
+                bottom: 16px;
+                left: 16px;
+                padding: 10px 16px;
+                font-size: 0.88rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Vertex <span>| فيرتيكس للحلول العقارية</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">عن الشركة</a></li>
+                <li><a href="#services">الخدمات</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="about">
+        <div class="container">
+            
+            <div class="hero-image-container">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="مبنى عصري - فيرتيكس للحلول العقارية">
+            </div>
+
+            <h1>Vertex | فيرتيكس للحلول العقارية والمصاعد</h1>
+            <p>يمكنك الاتصال بنا على 01004652033 عندنا أحدث الحلول والأنظمة المتكاملة للمباني والمصاعد بأعلى معايير الأمان والدقة الهندسية لضمان استثمار عقاري عصري ومستدام.</p>
+            
+            <div class="hero-actions">
+                <a href="tel:01004652033" class="btn btn-call">
+                    📞 اتصل بنا: 01004652033
+                </a>
+                <a href="https://wa.me/201004652033?text=السلام%20عليكم،%20أستفسر%20عن%20خدمات%20المصاعد%20والحلول%20العقارية" target="_blank" class="btn btn-wa">
+                    💬 تواصل عبر واتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <h3>التوريد والتركيب</h3>
+                    <p>تركيب أنظمة المصاعد والحلول العقارية الحديثة للمباني السكنية والتجارية بأحدث التقنيات.</p>
+                </div>
+                <div class="card">
+                    <h3>الصيانة الوقائية</h3>
+                    <p>برامج صيانة دورية شاملة لفحص المحركات، أنظمة الأمان، ولوحات التحكم لضمان الاستمرارية وتقليل الأعطال.</p>
+                </div>
+                <div class="card">
+                    <h3>التحديث والتطوير</h3>
+                    <p>تحديث المباني والمصاعد القديمة واستبدال الأنظمة بأنظمة ذكية لزيادة كفاءة الطاقة وتسهيل الحركة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/201004652033?text=السلام%20عليكم،%20أستفسر%20عن%20خدمات%20المصاعد%20والحلول%20العقارية" target="_blank" class="whatsapp-float" aria-label="تواصل معنا عبر الواتساب">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+        </svg>
+        <span>راسلنا على واتساب</span>
+    </a>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 جميع الحقوق محفوظة لشركة فيرتيكس للمصاعد</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
